@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parkinfo.component.css']
 })
 export class ParkinfoComponent implements OnInit {
+  ngOnInit(): void {
+  }
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
 
 }

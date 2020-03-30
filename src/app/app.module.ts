@@ -7,20 +7,26 @@ import { ParkinfoComponent } from './parking/parkinfo/parkinfo.component';
 import { ParkstatusComponent } from './parking/parkstatus/parkstatus.component';
 import { ParkstatisticsComponent } from './parking/parkstatistics/parkstatistics.component';
 import { MapComponent } from './map/map.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ParkingListComponent } from './parking/parking-list/parking-list.component';
+import { ParkingModule } from './parking/parking.module';
+import { MaterialModule } from './material/material.module';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { MapModule } from './map/map.module';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ParkingComponent,
-    ParkinfoComponent,
-    ParkstatusComponent,
-    ParkstatisticsComponent,
-    MapComponent
-  ],
+  declarations: [AppComponent, MainNavComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    ParkingModule,
+    MaterialModule,
+    MapModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}

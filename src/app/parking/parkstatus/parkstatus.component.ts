@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parkstatus.component.css']
 })
 export class ParkstatusComponent implements OnInit {
-
-  constructor() { }
-
   ngOnInit(): void {
   }
 
+  constructor() { }
 }
