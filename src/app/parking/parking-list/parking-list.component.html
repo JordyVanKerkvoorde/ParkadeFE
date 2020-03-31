@@ -1,1 +1,41 @@
 <p>parking-list works!</p>
+<div fxLayout="column" fxLayoutGap="2%">
+    <mat-card>
+        <mat-form-field>
+            <input
+                matInput
+                (keyup)="filterParking$.next($event.target.value)"
+                placeholder="filter"
+                type="text"
+                data-cy="filterInput"
+            />
+        </mat-form-field>
+    </mat-card>
+    <mat-card class="error" *ngIf="errorMessage" data-cy="appError">
+        error occured loading the recipe list!
+    </mat-card>
+    <div *ngIf="parkings$ | async as parkings; else loadingOrError">
+        <div
+        fxLayout="row wrap"
+         fxLayout.xs="column"
+         fxLayoutGap="0.5%"
+         fxLayoutAlign="start"
+        ><!--filter needs to be added in For and filter classes need to be made-->
+            <div
+                class="recipe"
+                *ngFor="let parking of parkings"
+                fxFlex="0 0 calc(25%-0.5%)"
+                fxFlex.xs="100%"
+            >
+            <!--add app-parking-->
+                
+            </div>
+        </div>
+    </div>
+    <ng-template #loadingOrError>
+        <span *ngIf="errorMessage; else loading"></span>
+        <ng-template #loading>
+          <mat-spinner></mat-spinner>
+        </ng-template>
+      </ng-template>
+</div>
