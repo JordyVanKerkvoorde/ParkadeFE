@@ -14,7 +14,6 @@ import { MaterialModule } from './material/material.module';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { MapModule } from './map/map.module';
 
-
 @NgModule({
   declarations: [AppComponent, MainNavComponent],
   imports: [

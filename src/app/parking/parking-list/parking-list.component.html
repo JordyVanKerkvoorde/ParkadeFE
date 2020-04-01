@@ -12,7 +12,7 @@
         </mat-form-field>
     </mat-card>
     <mat-card class="error" *ngIf="errorMessage" data-cy="appError">
-        error occured loading the recipe list!
+        error occured loading the parking list!
     </mat-card>
     <div *ngIf="parkings$ | async as parkings; else loadingOrError">
         <div
@@ -22,13 +22,13 @@
          fxLayoutAlign="start"
         ><!--filter needs to be added in For and filter classes need to be made-->
             <div
-                class="recipe"
-                *ngFor="let parking of parkings"
+                class="parking"
+                *ngFor="let parking of parkings | parkingFilter: filterParkingName"
                 fxFlex="0 0 calc(25%-0.5%)"
                 fxFlex.xs="100%"
             >
             <!--add app-parking-->
-                
+                <app-parking [parking]="parking" data-cy="parkingCard"></app-parking>
             </div>
         </div>
     </div>
