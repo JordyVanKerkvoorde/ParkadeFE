@@ -14,7 +14,7 @@
     <mat-card class="error" *ngIf="errorMessage" data-cy="appError">
         error occured loading the parking list!
     </mat-card>
-    <div *ngIf="parkings$ | async as parkings; else loadingOrError">
+    <div *ngIf="(parkings$ | async) as parkings; else loadingOrError">
         <div
         fxLayout="row wrap"
          fxLayout.xs="column"
@@ -23,7 +23,7 @@
         ><!--filter needs to be added in For and filter classes need to be made-->
             <div
                 class="parking"
-                *ngFor="let parking of parkings | parkingFilter: filterParkingName"
+                *ngFor="let parking of (parkings$ | async | parkingFilter: filterParkingName)"
                 fxFlex="0 0 calc(25%-0.5%)"
                 fxFlex.xs="100%"
             >

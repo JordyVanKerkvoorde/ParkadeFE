@@ -27,7 +27,7 @@ export class ParkingDataService {
    }
 
   get allParkings$(): Observable<Parking[]>{
-    return this._parkings$;
+    return this.parkings$;
   }
 
   get parkings$(): Observable<Parking[]>{
@@ -37,9 +37,10 @@ export class ParkingDataService {
       catchError(this.handleError),
       map((list: any[]): Parking[] => list.map(Parking.fromJSON))
     );
+    
   }
 
-  getparking$(id: number): Observable<Parking>{
+  getParking$(id: number): Observable<Parking>{
     return this.http
       .get(`${environment.apiUrl}/Parking/${id}`)
       .pipe(catchError(this.handleError), map(Parking.fromJSON));
