@@ -3,13 +3,12 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Home</a>
-      <a mat-list-item href="#">About</a>
-      <a mat-list-item href="#">Parkings</a>
-      <a mat-list-item href="#">Update Journals</a>
-      <a mat-list-item href="#">Contact</a>
+      <a mat-list-item [routerLink]="['map']"><mat-icon class="icon">map</mat-icon>Home</a>
+      <a mat-list-item [routerLink]="['about']"><mat-icon class="icon">fingerprint</mat-icon>About</a>
+      <a mat-list-item [routerLink]="['parkinglist']"><mat-icon class="icon">local_parking</mat-icon>Parkings</a>
+      <a mat-list-item [routerLink]="['journals']"><mat-icon class="icon">bookmarks</mat-icon>Update Journals</a>
+      <a mat-list-item [routerLink]="['contact']"><mat-icon class="icon">phone</mat-icon>Contact</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,7 +21,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>parkingapp</span>
+      <span>Untitled Parking Project</span>
     </mat-toolbar>
     <!-- Add Content Here -->
     <ng-content></ng-content>

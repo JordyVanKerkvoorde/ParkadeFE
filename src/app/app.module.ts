@@ -13,15 +13,32 @@ import { ParkingModule } from './parking/parking.module';
 import { MaterialModule } from './material/material.module';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { MapModule } from './map/map.module';
+import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundModule } from './page-not-found/page-not-found.module';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+
+const appRoutes: Routes = [
+  { path: 'parkinglist', component: ParkingListComponent },
+  { path: 'map', component: MapComponent },
+  { path: 'about', component: AboutComponent} ,
+  { path: 'contact', component: ContactComponent },
+
+  { path: '', redirectTo: 'map', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }
+];
 
 @NgModule({
-  declarations: [AppComponent, MainNavComponent],
+  declarations: [AppComponent, MainNavComponent, PageNotFoundComponent, AboutComponent, ContactComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     ParkingModule,
     MaterialModule,
+    RouterModule.forRoot(appRoutes),
     MapModule,
+    PageNotFoundModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
