@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { LayoutModule } from '@angular/cdk/layout';
+import { GridAlignStyleBuilder } from '@angular/flex-layout/grid/typings/grid-align/grid-align';
 
 @NgModule({
   declarations: [],
@@ -33,7 +34,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    LayoutModule
+    LayoutModule,
   ],
   exports: [
     FlexLayoutModule,

@@ -18,6 +18,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { AboutModule } from './about/about.module';
 
 const appRoutes: Routes = [
   { path: 'parkinglist', component: ParkingListComponent },
@@ -30,7 +31,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, MainNavComponent, PageNotFoundComponent, AboutComponent, ContactComponent],
+  declarations: [AppComponent, MainNavComponent, PageNotFoundComponent, ContactComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -39,6 +40,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     MapModule,
     PageNotFoundModule,
+    AboutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

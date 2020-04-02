@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    background: #673AB7;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../../assets/wave2.png);
+    background-size: 1000px 100px;
+}
+
+section .wave.wave1 {
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+
+section .wave.wave3 {
+    animation: animate 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+}
+
+.aboutTitle{
+    position: relative;
+    margin: 0px;
+    padding: 35px;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #FAFAFA;
+    overflow: hidden;
+}
+
+
+@keyframes animate{
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 1000px;
+    }
+}
+
+@keyframes animate2{
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: -1000px;
+    }
+}
