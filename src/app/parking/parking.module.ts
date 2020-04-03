@@ -6,8 +6,9 @@ import {ParkingComponent} from './parking/parking.component';
 import {ParkingListComponent} from './parking-list/parking-list.component'
 import { MaterialModule } from '../material/material.module';
 import { HttpClientModule } from '@angular/common/http';
-import { ParkingFilterPipe } from './parking-filter.pipe'
-
+import { ParkingFilterPipe } from './parking-filter.pipe';
+import { ParkingdetailsComponent } from './parkingdetails/parkingdetails.component';
+import { ParkingdetailsResolverService } from './parkingdetails-resolver.service';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ParkingFilterPipe } from './parking-filter.pipe'
     ParkstatusComponent, 
     ParkingComponent, 
     ParkingListComponent,
-    ParkingFilterPipe
+    ParkingFilterPipe,
+    ParkingdetailsComponent
   ],
   imports: [CommonModule, HttpClientModule, MaterialModule],
   exports: [ParkingListComponent]

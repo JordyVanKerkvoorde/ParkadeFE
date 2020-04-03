@@ -26,9 +26,16 @@
                 *ngFor="let parking of (parkings$ | async | parkingFilter: filterParkingName)"
                 fxFlex="0 0 calc(25%-0.5%)"
                 fxFlex.xs="100%"
+                [class.selected]="parking.id === selectedId"
             >
-            <!--add app-parking-->
-                <app-parking [parking]="parking" data-cy="parkingCard"></app-parking>
+            <!--add anchor to parkingdetails route
+                
+            <a [routerLink]="[parking.id]">
+                test
+            </a>
+            -->
+                    <app-parking [parking]="parking" data-cy="parkingCard"></app-parking>
+                
             </div>
         </div>
     </div>

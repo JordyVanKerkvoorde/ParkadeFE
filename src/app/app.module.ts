@@ -19,28 +19,48 @@ import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutModule } from './about/about.module';
+import { ChatModule } from './chat/chat.module';
+import { ChatDialogComponent } from './chat/chat-dialog/chat-dialog.component';
+import { ParkingdetailsComponent } from './parking/parkingdetails/parkingdetails.component';
+import { ParkingdetailsResolverService } from './parking/parkingdetails-resolver.service';
 
 const appRoutes: Routes = [
-  { path: 'parkinglist', component: ParkingListComponent },
+  { path: 'parkinglist', 
+    component: ParkingListComponent,
+    children: [
+      { 
+        path: 'id', 
+        component: ParkingdetailsComponent, 
+        resolve: {
+          parking: ParkingdetailsResolverService
+        }
+      }
+    ]
+
+  },
   { path: 'map', component: MapComponent },
   { path: 'about', component: AboutComponent} ,
   { path: 'contact', component: ContactComponent },
+  { path: 'chat', component: ChatDialogComponent},
+  
 
   { path: '', redirectTo: 'map', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
-  declarations: [AppComponent, MainNavComponent, PageNotFoundComponent, ContactComponent],
+  declarations: [AppComponent, MainNavComponent, PageNotFoundComponent, ContactComponent,],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     ParkingModule,
     MaterialModule,
     RouterModule.forRoot(appRoutes),
+    RouterModule.forChild(appRoutes),
     MapModule,
     PageNotFoundModule,
     AboutModule,
+    ChatModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
