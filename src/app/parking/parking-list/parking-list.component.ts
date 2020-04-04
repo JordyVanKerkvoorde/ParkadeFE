@@ -53,12 +53,6 @@ export class ParkingListComponent implements OnInit {
         return EMPTY;
       })
     );
-    this.parkingslist$ = this._route.paramMap.pipe(
-      switchMap(params => {
-        this.selectedId = + params.get('id');
-        return this._parkingDataService.getParking$(this.selectedId);
-      })
-    )
   }
 
   applyFilter(filter: string){

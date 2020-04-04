@@ -1,10 +1,13 @@
+import { Entry } from './entry.model';
+
 export interface ParkingJson {
     id: number;
     name: string;
     type: string;
     latitude: string;
     longtitude: string;
-    maxcap: number;
+    maxCap: number;
+    latestEntry: Entry;
 }
 
 export class Parking {
@@ -14,7 +17,8 @@ export class Parking {
         private _type: string,
         private _latitude: string,
         private _longtitude: string,
-        private _maxcap: number
+        private _maxCap: number,
+        private _latestEntry: Entry
     ){}
 
     static fromJSON(json: ParkingJson): Parking{
@@ -24,7 +28,8 @@ export class Parking {
             json.type,
             json.latitude,
             json.longtitude,
-            json.maxcap
+            json.maxCap,
+            json.latestEntry
         );
         return parking;
     }
@@ -36,7 +41,8 @@ export class Parking {
             type: this._type,
             latitude: this._latitude,
             longtitude: this._longtitude,
-            maxcap: this._maxcap
+            maxCap: this._maxCap,
+            latestEntry: this._latestEntry
         };
     }
 
@@ -61,6 +67,10 @@ export class Parking {
     }
 
     get maxcap(){
-        return this._maxcap;
+        return this._maxCap;
+    }
+
+    get latestEntry(){
+        return this._latestEntry;
     }
 }

@@ -1,3 +1,4 @@
+  
 import { Component, OnInit } from '@angular/core';
 import Map from 'ol/Map';
 import View from 'ol/View';
@@ -8,7 +9,6 @@ import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
 import VectorSource from 'ol/source/Vector';
 import {Icon, Style} from 'ol/style';
 import OSM from 'ol/source/OSM';
-import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-map',
@@ -21,24 +21,18 @@ export class MapComponent implements OnInit {
   vectorSource;
   vectorLayer;
   rasterLayer;
-  // reep = {
-  //   naam: "Reep",
-  //   latitude: 51.05207,
-  //   longtitude: 3.72981,
-  //   maxcap: 450,
-  // }
   constructor() { }
 
   ngOnInit(): void {
     this.testp = new Feature({
-      geometry: new Point(fromLonLat([51.05207 , 3.72981]))
+      geometry: new Point(fromLonLat([3.7219431, 51.054633]))
     });
     
     this.testp.setStyle(new Style({
       image: new Icon(({
         color: '#8959A8',
         crossOrigin: 'anonymous',
-        src: 'assets/car-parking.svg',
+        src: '../',
         imgSize: [20, 20]
       }))
     }));
