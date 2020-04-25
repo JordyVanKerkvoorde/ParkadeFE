@@ -1,4 +1,17 @@
-# Parkingapp
+# Parkingapp Parkade
+Via de app kun je gemakkelijk het aantal vrije parkeerplaatsen raadplegen van op afstand.
+
+# Hosting
+Op dit moment werd voor de applicatie reeds de domeinnaam met .be TLD gereserveerd, aangezien de applicatie nog niet afgewerkt is staat deze dus nog niet online. Voor de presentatie zal de applicatie online worden geplaatst (hopelijk).
+
+https://www.parkade.be/
+
+# OpenStreetMap
+De applicatie maakt gebruik van OpenLayers en OpenStreetMap om de parkings op een kaart te kunnen visualiseren.
+
+
+
+# Angular readme
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
