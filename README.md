@@ -9,7 +9,8 @@ https://www.parkade.be/
 # OpenStreetMap
 De applicatie maakt gebruik van OpenLayers en OpenStreetMap om de parkings op een kaart te kunnen visualiseren.
 
-
+# Huidige problemen
+- Bij het wegschrijven van een entry naar de databank maak ik gebruik van de time functie in SQL server. Echter loopt het uur steeds 4 uur achter op het werkelijke uur. Dit terwijl de server time wel goed staat. Op dit moment vormt dit geen groot probleem aangezien ik enkel het laatste tijdstip overneem in de webapplicatie, echter wanneer ik data analyses wil gaan uitvoeren zal dit voor problemen geven. Er gewoon 4 uur bijtellen zou dit probleem kunnen oplossen
 
 # Angular readme
 
