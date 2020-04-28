@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  apiUrl: '/api'
+  apiUrl: '/api',
+  dialogflow: {
+    angularBot: '793805a051204ef6afed42f681a24d2a'
+  }
 };
 
 /*

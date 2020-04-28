@@ -7,8 +7,13 @@ import Point from 'ol/geom/Point';
 import { fromLonLat } from 'ol/proj.js';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
 import VectorSource from 'ol/source/Vector';
-import {Icon, Style} from 'ol/style';
 import OSM from 'ol/source/OSM';
+import Style from 'ol/style/Style';
+import Icon from 'ol/style/Icon';
+import { ParkingDataService } from '../parking/parking-data.service';
+import { Parking } from '../parking/parking.model';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { ParkingListComponent } from '../parking/parking-list/parking-list.component';
 
 @Component({
   selector: 'app-map',
@@ -21,30 +26,46 @@ export class MapComponent implements OnInit {
   vectorSource;
   vectorLayer;
   rasterLayer;
-  constructor() { }
+  //features: Feature[];
+
+  constructor(
+    private _pds: ParkingDataService
+  ) { }
 
   ngOnInit(): void {
-    this.testp = new Feature({
-      geometry: new Point(fromLonLat([3.7219431, 51.054633]))
-    });
-    
-    this.testp.setStyle(new Style({
-      image: new Icon(({
-        color: '#8959A8',
-        crossOrigin: 'anonymous',
-        src: '../',
-        imgSize: [20, 20]
-      }))
-    }));
+    let parkingdata = new Array();
+
+    this._pds.allParkings$.subscribe((parkings: Parking[])=>{
+      parkings.forEach(parking => {
+
+        let ftre: Feature = new Feature({
+          geometry: new Point(fromLonLat([parking.longtitude, parking.latitude]))
+        });
+
+        ftre.setStyle(new Style({
+          image: new Icon(({
+            color: '#8959A8',
+            crossOrigin: 'anonymous',
+            src: 'assets/park.svg',
+            imgSize: [30, 30]
+          }))
+        }));
+
+        parkingdata.push(ftre)
+      });
+    })
 
     this.vectorSource = new VectorSource({
-      features: [this.testp]
+      features: parkingdata
     });
 
     this.vectorLayer = new VectorLayer({
       source: this.vectorSource
     });
+    this.initializeMap();
+  }
 
+  initializeMap(){
     this.map = new Map({
       target: 'map',
       layers: [ new TileLayer({
@@ -56,5 +77,22 @@ export class MapComponent implements OnInit {
       })
     });
   }
-
 }
+
+    // //create new feature
+    // let ftre: Feature = new Feature({
+    //   geometry: new Point(fromLonLat([3.7219431, 51.054633]))
+    // });
+    // //style feature to be icon
+    // ftre.setStyle(new Style({
+    //   image: new Icon(({
+    //     color: '#8959A8',
+    //     crossOrigin: 'anonymous',
+    //     src: 'assets/park.svg',
+    //     imgSize: [30, 30]
+    //   }))
+    // }));
+    // //add feature to array
+    // console.log("workingFTRE")
+    // console.log(features)
+    // features.push(ftre)

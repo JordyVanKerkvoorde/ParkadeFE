@@ -40,6 +40,14 @@ export class ParkingDataService {
     
   }
 
+  get parkings(){
+    this.parkings$.subscribe(parkings =>{
+      this._parkings = parkings as Parking[];
+    });
+    console.log(this._parkings);
+    return this._parkings;
+  }
+
   getParking$(id: number): Observable<Parking>{
     return this.http
       .get(`${environment.apiUrl}/Parking/${id}`)
