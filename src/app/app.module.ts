@@ -23,6 +23,7 @@ import { AboutModule } from './about/about.module';
 import { ParkingdetailsComponent } from './parking/parkingdetails/parkingdetails.component';
 import { ParkingdetailsResolverService } from './parking/parkingdetails-resolver.service';
 import { AppRoutingModule } from './app-routing.module';
+import { UserModule } from './user/user.module';
 
 
 
@@ -37,6 +38,7 @@ import { AppRoutingModule } from './app-routing.module';
     MapModule,
     PageNotFoundModule,
     AboutModule,
+    UserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
