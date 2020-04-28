@@ -22,39 +22,18 @@ import { AboutModule } from './about/about.module';
 
 import { ParkingdetailsComponent } from './parking/parkingdetails/parkingdetails.component';
 import { ParkingdetailsResolverService } from './parking/parkingdetails-resolver.service';
+import { AppRoutingModule } from './app-routing.module';
 
-const appRoutes: Routes = [
-  { path: 'parkinglist', 
-    component: ParkingListComponent,
-    children: [
-      { 
-        path: 'id', 
-        component: ParkingdetailsComponent, 
-        resolve: {
-          parking: ParkingdetailsResolverService
-        }
-      }
-    ]
 
-  },
-  { path: 'map', component: MapComponent },
-  { path: 'about', component: AboutComponent} ,
-  { path: 'contact', component: ContactComponent },
-  
-
-  { path: '', redirectTo: 'map', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent },
-];
 
 @NgModule({
   declarations: [AppComponent, MainNavComponent, PageNotFoundComponent, ContactComponent,],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     ParkingModule,
     MaterialModule,
-    RouterModule.forRoot(appRoutes),
-    RouterModule.forChild(appRoutes),
     MapModule,
     PageNotFoundModule,
     AboutModule,

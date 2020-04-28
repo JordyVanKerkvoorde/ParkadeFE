@@ -13,6 +13,7 @@ import {
 
 import { ActivatedRoute }     from '@angular/router';
 import { switchMap }      from 'rxjs/operators';
+import { Router } from '@angular/router'
 
 
 @Component({
@@ -35,7 +36,8 @@ export class ParkingListComponent implements OnInit {
   constructor(
     private _parkingDataService: ParkingDataService,
     
-    private _route: ActivatedRoute
+    private _route: ActivatedRoute,
+    private _router: Router
     ) {
     this.filterParking$
       .pipe(
@@ -61,5 +63,9 @@ export class ParkingListComponent implements OnInit {
 
   get parkings$(): Observable<Parking[]>{
     return this._fetchParkings$;
+  }
+
+  onClick(parkingId: number){
+    this._router.navigate(['parking', parkingId]);
   }
 }

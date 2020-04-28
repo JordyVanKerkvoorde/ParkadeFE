@@ -12,17 +12,20 @@ import { Parking } from '../parking.model';
 export class ParkingdetailsComponent implements OnInit {
   parking: Parking;
   id: number;
+  name: string;
   constructor(
-    private _parkingDataService: ParkingDataService,
     private _route: ActivatedRoute,
-    private _router: Router) { }
+    private _pds: ParkingDataService) { }
 
   ngOnInit(): void {
-    this._route.data
-      .subscribe((data: {parking: Parking}) => {
-        this.id = data.parking.id;
-        this.parking = data.parking;
-      });
+    this._route.paramMap.subscribe(params =>{
+      this.id = parseInt(params.get('id'));
+    });
+    this._pds.getParking$(this.id).subscribe((parking: Parking) =>{
+      console.log(parking); //deze geeft mooi het parking object weer
+      this.parking = parking;
+      this.name = parking.name;
+    });
+    console.log(this.parking) //deze geeft undefined
   }
-
 }

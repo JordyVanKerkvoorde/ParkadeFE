@@ -27,13 +27,9 @@
                 fxFlex="0 0 calc(25%-0.5%)"
                 fxFlex.xs="100%"
             >
-            <!--add anchor to parkingdetails route
-                
-            <a [routerLink]="[parking.id]">
-                test
-            </a>
-            -->
-                    <app-parking [parking]="parking" data-cy="parkingCard"></app-parking>
+                    <div class="pointer" (click)="onClick(parking.id)"> 
+                        <app-parking [parking]="parking" data-cy="parkingCard"></app-parking>
+                    </div>
                 
             </div>
         </div>
