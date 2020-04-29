@@ -12,7 +12,6 @@ import { Parking } from '../parking.model';
 export class ParkingdetailsComponent implements OnInit {
   parking: Parking;
   id: number;
-  name: string;
   constructor(
     private _route: ActivatedRoute,
     private _pds: ParkingDataService) { }
@@ -21,11 +20,10 @@ export class ParkingdetailsComponent implements OnInit {
     this._route.paramMap.subscribe(params =>{
       this.id = parseInt(params.get('id'));
     });
+
     this._pds.getParking$(this.id).subscribe((parking: Parking) =>{
-      console.log(parking); //deze geeft mooi het parking object weer
-      this.parking = parking;
-      this.name = parking.name;
+      this.parking = parking
     });
-    console.log(this.parking) //deze geeft undefined
+    
   }
 }

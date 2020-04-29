@@ -47,22 +47,25 @@ export class MapComponent implements OnInit {
             color: '#8959A8',
             crossOrigin: 'anonymous',
             src: 'assets/park.svg',
-            imgSize: [30, 30]
+            imgSize: [25, 25]
           }))
         }));
 
         parkingdata.push(ftre)
       });
+      this.vectorSource = new VectorSource({
+        features: parkingdata
+      });
+  
+      this.vectorLayer = new VectorLayer({
+        source: this.vectorSource
+      });
+      this.initializeMap();
     })
 
-    this.vectorSource = new VectorSource({
-      features: parkingdata
-    });
+    console.log(parkingdata)
 
-    this.vectorLayer = new VectorLayer({
-      source: this.vectorSource
-    });
-    this.initializeMap();
+    
   }
 
   initializeMap(){
@@ -72,7 +75,7 @@ export class MapComponent implements OnInit {
         source: new OSM()
       }), this.vectorLayer ],
       view: new View({
-        center: fromLonLat([3.7219431, 51.054633]),
+        center: fromLonLat([3.7219431, 51.048919]),
         zoom: 15,
       })
     });
