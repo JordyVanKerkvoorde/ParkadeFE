@@ -23,6 +23,7 @@ export class ParkingdetailsComponent implements OnInit {
 
     this._pds.getParking$(this.id).subscribe((parking: Parking) =>{
       this.parking = parking
+      console.log(parking.latestEntry)
     });
     
   }

@@ -12,8 +12,6 @@ import Style from 'ol/style/Style';
 import Icon from 'ol/style/Icon';
 import { ParkingDataService } from '../parking/parking-data.service';
 import { Parking } from '../parking/parking.model';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
-import { ParkingListComponent } from '../parking/parking-list/parking-list.component';
 
 @Component({
   selector: 'app-map',

@@ -1,2 +1,20 @@
-<p>parkingdetails works!</p>
-<p>{{ this.parking.name }}</p>
+<h1 class="mat-display-2">{{ this.parking.name }}</h1>
+<div>
+    <mat-list>
+        <mat-list-item> Beschikbare plaatsen:  </mat-list-item>
+        <mat-list-item> Maximale capaciteit:  </mat-list-item>
+        <mat-list-item> Coördinaten:  </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <!-- latestEntry = null => in API latest entry doorgeven -->
+        <mat-list-item> {{ this.parking.latestEntry }} </mat-list-item>
+        <mat-list-item> {{ this.parking.maxcap }} </mat-list-item>
+        <mat-list-item> {{ this.parking.latitude }}, {{ this.parking.longtitude }} </mat-list-item>
+    </mat-list>
+</div>
+
+<div>
+    <!-- chart.js chartcomponent -->
+    <!-- API aanpassen zodat er een data doorgestuurd kan worden naar de front-end -->
+</div>
+    
