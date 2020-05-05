@@ -18,6 +18,7 @@ In de parkingapplicatie maak ik gebruik van Chart.js om de data vanuit de databa
   
 - ~~In de front end applicatie kan ik niet aan de data van mijn API in mijn map component.~~
   - opgelost
-  
+
+- De documentatie van OpenLayers is niet altijd even gebruiksvriendelijk/correct dit zorgt voor grote frustraties bij het toevoegen van features aan het map-component. Op dit moment wil ik graag de pinpoints kunnen selecteren en naar hun detailpagina gaan. Helaas werkt dit tot op heden nog niet.
 
 
