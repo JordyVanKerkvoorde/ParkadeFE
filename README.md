@@ -4,6 +4,8 @@ Via de app kun je gemakkelijk het aantal vrije parkeerplaatsen raadplegen van op
 # Hosting
 Op dit moment werd voor de applicatie reeds de domeinnaam met .be TLD gereserveerd, aangezien de applicatie nog niet afgewerkt is staat deze dus nog niet online. Voor de presentatie zal de applicatie online worden geplaatst (hopelijk...).
 
+De database en de node.js applicaties runnen al op een ubuntu server maar de .NET Core IIS hosting blijkt toch wat moeilijker te zijn en kan pas gedaan worden vanzodra er niks meer aan de API moet veranderen.
+
 https://www.parkade.be/
 
 # OpenStreetMap (extra technologie?)
