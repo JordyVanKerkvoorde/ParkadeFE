@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ParkingFilterPipe } from './parking-filter.pipe';
 import { ParkingdetailsComponent } from './parkingdetails/parkingdetails.component';
 import { ParkingdetailsResolverService } from './parkingdetails-resolver.service';
+import { ChartComponent } from './chart/chart.component';
 
 
 @NgModule({
@@ -18,9 +19,10 @@ import { ParkingdetailsResolverService } from './parkingdetails-resolver.service
     ParkingComponent, 
     ParkingListComponent,
     ParkingFilterPipe,
-    ParkingdetailsComponent
+    ParkingdetailsComponent,
+    ChartComponent
   ],
-  imports: [CommonModule, HttpClientModule, MaterialModule],
+  imports: [CommonModule, HttpClientModule, MaterialModule, ],
   exports: [ParkingListComponent]
 })
 export class ParkingModule {

@@ -24,6 +24,7 @@ import { ParkingdetailsComponent } from './parking/parkingdetails/parkingdetails
 import { ParkingdetailsResolverService } from './parking/parkingdetails-resolver.service';
 import { AppRoutingModule } from './app-routing.module';
 import { UserModule } from './user/user.module';
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -39,6 +40,7 @@ import { UserModule } from './user/user.module';
     PageNotFoundModule,
     AboutModule,
     UserModule,
+    ChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
