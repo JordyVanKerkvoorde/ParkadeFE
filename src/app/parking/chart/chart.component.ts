@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chart from 'chart.js';
-import { Parking } from '../parking.model';
 import { ActivatedRoute } from '@angular/router';
-import { ParkingDataService } from '../parking-data.service';
+import { EntryDataService } from '../entry-data.service';
+import { DataWrapper } from '../datawrapper.model';
 
 
 
@@ -13,27 +13,33 @@ import { ParkingDataService } from '../parking-data.service';
 })
 export class ChartComponent implements OnInit {
   private chart;
-  //change to dataobject?
-  parking: Parking;
+  datawrapper: DataWrapper;
   id: number;
   constructor(
     private _route: ActivatedRoute,
-    //change to entrydataservice
-    private _pds: ParkingDataService) { }
+    private _eds: EntryDataService) { }
+
   ngOnInit() {
+    //read route parameter
     this._route.paramMap.subscribe(params =>{
       this.id = parseInt(params.get('id'));
     });
 
-    //change to entrydataservice
-    this._pds.getParking$(this.id).subscribe((parking: Parking) =>{
-      this.parking = parking
+    console.log("dataobject")
+    //fetch data
+    this._eds.getDataWrapper$(this.id).subscribe((data: DataWrapper) => {
+      this.datawrapper = data;
+      console.log(this.datawrapper);
+    })
+
+    //create new chart from given data
       this.chart = new Chart('canvas', {
         type: 'line',
         data:{
           labels: [],
           datasets: [
             //add dataset from entryservice
+            
           ]
         },
         options: {
@@ -50,7 +56,6 @@ export class ChartComponent implements OnInit {
           }
         }
       });
-    });
 
     
   }

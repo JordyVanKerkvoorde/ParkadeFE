@@ -4,23 +4,24 @@ import { map, catchError, tap, shareReplay, switchMap } from 'rxjs/operators';
 import { Entry } from './entry.model';
 import { Observable, throwError, BehaviorSubject, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { DataWrapper } from './datawrapper.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EntryDataService {
   
-  private _entry$ = new BehaviorSubject<Entry[]>([]);
-  private _entry: Entry;
+  private _datawrapper$ = new BehaviorSubject<DataWrapper[]>([]);
+  private _datawrapper: DataWrapper;
   
   constructor(private http: HttpClient) {
    }
 
 
-  getEntry$(parkingId): Observable<Entry>{
+  getDataWrapper$(parkingId): Observable<DataWrapper>{
     return this.http
       .get(`${environment.apiUrl}/Entry/${parkingId}`)
-      .pipe(catchError(this.handleError), map(Entry.fromJSON));
+      .pipe(catchError(this.handleError), map(DataWrapper.fromJSON));
   }
 
   handleError(err: any): Observable<never> {

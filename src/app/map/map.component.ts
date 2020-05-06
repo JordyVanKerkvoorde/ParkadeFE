@@ -12,6 +12,9 @@ import Style from 'ol/style/Style';
 import Icon from 'ol/style/Icon';
 import { ParkingDataService } from '../parking/parking-data.service';
 import { Parking } from '../parking/parking.model';
+import Select from 'ol/interaction/Select';
+import {click, pointerMove, altKeyOnly} from 'ol/events/condition';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-map',
@@ -27,11 +30,17 @@ export class MapComponent implements OnInit {
   //features: Feature[];
 
   constructor(
-    private _pds: ParkingDataService
+    private _pds: ParkingDataService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
     let parkingdata = new Array();
+    let select = new Select({
+      condition: click
+    });
+    
+    
 
     this._pds.allParkings$.subscribe((parkings: Parking[])=>{
       parkings.forEach(parking => {
@@ -48,22 +57,33 @@ export class MapComponent implements OnInit {
             imgSize: [25, 25]
           }))
         }));
+        
+        ftre.setId(parking.id)
 
+        select.getFeatures().push(ftre)
         parkingdata.push(ftre)
       });
       this.vectorSource = new VectorSource({
         features: parkingdata
       });
-  
+      
       this.vectorLayer = new VectorLayer({
         source: this.vectorSource
       });
+
+
       this.initializeMap();
+      this.map.addInteraction(select);
+      select.on('select', function(e) {
+        try {
+          let id: number = e.target.getFeatures().array_[0].id_;
+           console.log(id);
+           //not working yet :(
+           this.router.navigate([`parking/${id}`]);
+        } catch (error) {
+        }
+      });
     })
-
-    console.log(parkingdata)
-
-    
   }
 
   initializeMap(){
@@ -77,6 +97,8 @@ export class MapComponent implements OnInit {
         zoom: 15,
       })
     });
+
+    
   }
 }
 
