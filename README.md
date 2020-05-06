@@ -16,13 +16,7 @@ Als je op een van de features klikt naveeg je naar de pagina van die geselecteer
 In de parkingapplicatie maak ik gebruik van Chart.js om de data vanuit de databank te visualiseren in een grafiekvorm van de voorbije dag. Zo zou er dan ook data van de voorbije dagen kunnen geanalyseerd worden en een gemiddelde genomen worden om zo aan voorspellingen te doen.
 
 # Huidige problemen
-- ~~Bij het wegschrijven van een entry naar de databank maak ik gebruik van de time functie in SQL server. Echter loopt het uur steeds 2 uur achter op het werkelijke uur. Dit terwijl de server time wel goed staat. Op dit moment vormt dit geen groot probleem aangezien ik enkel het laatste tijdstip overneem in de webapplicatie, echter wanneer ik data analyses wil gaan uitvoeren zal dit voor problemen geven. Er gewoon 2 uur bijtellen zou dit probleem kunnen oplossen.~~
-  - opgelost door in de API hier rekening mee te houden en de data op te vragen van de vorige dag 22h tot en met de huisige tijd
-  
-- ~~In de front end applicatie kan ik niet aan de data van mijn API in mijn map component.~~
-  - opgelost
 
-- ~~De documentatie van OpenLayers is niet altijd even gebruiksvriendelijk/correct dit zorgt voor grote frustraties bij het toevoegen van features aan het map-component. Op dit moment wil ik graag de pinpoints kunnen selecteren en naar hun detailpagina gaan. Helaas werkt dit tot op heden nog niet.~~
-  - opgelost door features toe te voegen aan select object 
+- zie github issues
 
 
