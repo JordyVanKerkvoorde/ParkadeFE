@@ -1,33 +1,33 @@
 export interface DataWrapperJson {
-    timedata: Date[];
-    capacitydata: number[];
+    timeData: Date[];
+    capacityData: number[];
 }
 
 export class DataWrapper {
     constructor(
-        private _timedata: Date[],
-        private _capacitydata: number[],
+        private _timeData: Date[],
+        private _capacityData: number[],
     ){}
 
     static fromJSON(json: DataWrapperJson): DataWrapper{
         const datawrapper = new DataWrapper(
-            json.timedata,
-            json.capacitydata,
+            json.timeData,
+            json.capacityData,
         );
         return datawrapper;
     }
 
     toJSON(): DataWrapperJson{
         return {
-            timedata: this._timedata,
-            capacitydata: this._capacitydata,
+            timeData: this._timeData,
+            capacityData: this._capacityData,
         };
     }
     get timedata(){
-        return this._timedata;
+        return this._timeData;
     }
 
     get capacitydata(){
-        return this._capacitydata;
+        return this._capacityData;
     }
 }
