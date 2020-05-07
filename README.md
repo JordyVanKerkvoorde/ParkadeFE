@@ -8,11 +8,11 @@ De database en de node.js applicaties runnen al op een ubuntu server maar de .NE
 
 https://www.parkade.be/
 
-# OpenStreetMap (extra technologie?)
+# OpenStreetMap
 De applicatie maakt gebruik van OpenLayers en OpenStreetMap om de parkings op een kaart te kunnen visualiseren.
 Als je op een van de features klikt naveeg je naar de pagina van die geselecteerde parking.
 
-# Chart.js (extra technologie?)
+# Chart.js
 In de parkingapplicatie maak ik gebruik van Chart.js om de data vanuit de databank te visualiseren in een grafiekvorm van de voorbije dag. Zo zou er dan ook data van de voorbije dagen kunnen geanalyseerd worden en een gemiddelde genomen worden om zo aan voorspellingen te doen.
 
 # Huidige problemen
