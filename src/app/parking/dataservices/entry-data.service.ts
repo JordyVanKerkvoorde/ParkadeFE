@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { map, catchError, tap, shareReplay, switchMap } from 'rxjs/operators';
-import { Entry } from './entry.model';
+import { Entry } from '../models/entry.model';
 import { Observable, throwError, BehaviorSubject, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { DataWrapper } from './datawrapper.model';
+import { DataWrapper } from '../models/datawrapper.model';
 
 @Injectable({
   providedIn: 'root'

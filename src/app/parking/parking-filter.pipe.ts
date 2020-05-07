@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Parking } from './parking.model';
+import { Parking } from './models/parking.model';
 
 @Pipe({
   name: 'parkingFilter'

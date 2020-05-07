@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Parking } from '../parking.model';
-import { ParkingDataService } from '../parking-data.service';
+import { Parking } from '../models/parking.model';
+import { ParkingDataService } from '../dataservices/parking-data.service';
 import { Subject, Observable, of, EMPTY, merge } from 'rxjs';
 import {
   distinctUntilChanged,

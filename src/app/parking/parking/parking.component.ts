@@ -1,8 +1,8 @@
-import { ParkingDataService } from '../parking-data.service';
+import { ParkingDataService } from '../dataservices/parking-data.service';
 import { Component, OnInit, Input } from '@angular/core';
-import { Parking } from '../parking.model';
-import { Entry } from '../entry.model';
-import { EntryDataService } from '../entry-data.service';
+import { Parking } from '../models/parking.model';
+import { Entry } from '../models/entry.model';
+import { EntryDataService } from '../dataservices/entry-data.service';
 import { Subject, Observable, of, EMPTY, merge } from 'rxjs';
 import {
   distinctUntilChanged,

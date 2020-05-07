@@ -1,8 +1,8 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import * as Chart from 'chart.js';
 import { ActivatedRoute } from '@angular/router';
-import { EntryDataService } from '../entry-data.service';
-import { DataWrapper } from '../datawrapper.model';
+import { EntryDataService } from '../dataservices/entry-data.service';
+import { DataWrapper } from '../models/datawrapper.model';
 
 
 

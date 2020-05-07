@@ -6,8 +6,8 @@ import {
 } from '@angular/router';
 import { Observable, of, EMPTY, empty }  from 'rxjs';
 import { mergeMap, take } from 'rxjs/operators';
-import { Parking } from './parking.model';
-import { ParkingDataService } from './parking-data.service';
+import { Parking } from './models/parking.model';
+import { ParkingDataService } from './dataservices/parking-data.service';
 
 @Injectable({
   providedIn: 'root'

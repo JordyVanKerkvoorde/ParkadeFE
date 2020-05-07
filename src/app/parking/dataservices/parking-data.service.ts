@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { map, catchError, tap, shareReplay, switchMap } from 'rxjs/operators';
-import { Parking } from './parking.model';
+import { Parking } from '../models/parking.model';
 import { Observable, throwError, BehaviorSubject, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
 

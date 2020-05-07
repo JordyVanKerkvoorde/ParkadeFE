@@ -1,8 +1,8 @@
-import { ParkingDataService } from '../parking-data.service';
+import { ParkingDataService } from '../dataservices/parking-data.service';
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Parking } from '../parking.model';
+import { Parking } from '../models/parking.model';
 
 @Component({
   selector: 'app-parkingdetails',
