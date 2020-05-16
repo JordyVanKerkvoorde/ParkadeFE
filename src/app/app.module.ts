@@ -25,11 +25,13 @@ import { ParkingdetailsResolverService } from './parking/parkingdetails-resolver
 import { AppRoutingModule } from './app-routing.module';
 import { UserModule } from './user/user.module';
 import { ChartsModule } from 'ng2-charts';
+import { FormsModule, ReactiveFormsModule }         from '@angular/forms';
+import { SuggestionsComponent } from './suggestions/suggestions.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, MainNavComponent, PageNotFoundComponent, ContactComponent,],
+  declarations: [AppComponent, MainNavComponent, PageNotFoundComponent, ContactComponent, SuggestionsComponent,],
   imports: [
     AppRoutingModule,
     BrowserModule,
@@ -41,6 +43,7 @@ import { ChartsModule } from 'ng2-charts';
     AboutModule,
     UserModule,
     ChartsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

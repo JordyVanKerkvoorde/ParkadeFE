@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { map, catchError, tap, shareReplay, switchMap } from 'rxjs/operators';
-import { Suggestion } from '../models/suggestion.model';
+import { Suggestion } from './suggestion.model';
 import { Observable, throwError, BehaviorSubject, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { CompileShallowModuleMetadata } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -53,19 +54,21 @@ export class SuggestionDataService {
       .pipe(catchError(this.handleError), map(Suggestion.fromJSON));
   }
 
-  addNewRecipe(suggestion: Suggestion) {
+  addNewSuggestion(suggestion: Suggestion) {
     return this.http
       .post(`${environment.apiUrl}/Suggestion/`, suggestion.toJSON())
       .pipe(catchError(this.handleError), map(Suggestion.fromJSON))
       .pipe(
         // temporary fix, while we use the behaviorsubject as a cache stream
         catchError((err) => {
+          console.log(err)
           return throwError(err);
         }),
         tap((sug: Suggestion) => {
           this._suggestions$.next(this._suggestions);
         })
-      );
+      )
+      .subscribe();
   }
 
   handleError(err: any): Observable<never> {

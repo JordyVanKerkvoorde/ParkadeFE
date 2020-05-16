@@ -10,6 +10,7 @@ import { MapComponent } from './map/map.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SuggestionsComponent } from './suggestions/suggestions.component';
 
 const appRoutes: Routes = [
   { path: 'parkinglist', component: ParkingListComponent },
@@ -17,7 +18,7 @@ const appRoutes: Routes = [
   { path: 'map', component: MapComponent },
   { path: 'about', component: AboutComponent} ,
   { path: 'contact', component: ContactComponent },
-  
+  { path: 'suggestions', component: SuggestionsComponent },
 
   { path: '', redirectTo: 'map', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },

@@ -31,7 +31,7 @@ export class MapComponent implements OnInit {
 
   constructor(
     private _pds: ParkingDataService,
-    private router: Router,
+    private _router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -74,13 +74,15 @@ export class MapComponent implements OnInit {
 
       this.initializeMap();
       this.map.addInteraction(select);
-      select.on('select', function(e) {
+      select.on('select', e => {
         try {
           let id: number = e.target.getFeatures().array_[0].id_;
            console.log(id);
-           //not working yet :(
-           this.router.navigate([`parking/${id}`]);
+           console.log(this)
+           this._router.navigate(['parking', id]);
+
         } catch (error) {
+          console.log(error)
         }
       });
     })

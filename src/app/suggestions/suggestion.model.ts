@@ -7,8 +7,8 @@ export interface SuggestionJson {
 }
 
 export class Suggestion {
+    private _id: number
     constructor(
-        private _id: number,
         private _name: string,
         private _latitude: number,
         private _longtitude: number,
@@ -17,21 +17,20 @@ export class Suggestion {
 
     static fromJSON(json: SuggestionJson): Suggestion{
         const suggestion = new Suggestion(
-            json.id,
             json.name,
-            json.latitude,
             json.longtitude,
+            json.latitude,
             json.description,
         );
+        suggestion._id = json.id;
         return suggestion;
     }
 
     toJSON(): SuggestionJson{
-        return {
-            id: this._id,
+        return <SuggestionJson>{
             name: this._name,
-            latitude: this._latitude,
             longtitude: this._longtitude,
+            latitude: this._latitude,
             description: this._description,
         };
     }

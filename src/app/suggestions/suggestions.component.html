@@ -1,0 +1,39 @@
+<section>
+    <h2 class="aboutTitle">Suggesties</h2>
+    <div class="wave wave1"></div>
+    <div class="wave wave3"></div>
+</section>
+<div fxLayout="row" fxLayoutAlign="center center" class="suggform">
+    <form [formGroup]="suggestion" (ngSubmit)="onSubmit()">
+        <mat-card-content fxLayout="column">
+        <mat-form-field appearance="legacy">
+            <mat-label>Titel</mat-label>
+            <input matInput placeholder="parking naam..." type="text" formControlName="name" required>
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+          <mat-label>Longtitude</mat-label>
+          <input matInput placeholder="0,001" type="number" step="0.001" formControlName="longtitude">
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+          <mat-label>Latitude</mat-label>
+          <input matInput placeholder="0,001" type="number" step="0.001" formControlName="latitude">
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+          <mat-label>Omschrijving</mat-label>
+          <textarea matInput placeholder="Typ hier je bericht..." type="text" formControlName="description"></textarea>
+        </mat-form-field>
+            <div *ngIf="suggestion.controls['name'].invalid && (suggestion.controls['name'].dirty || suggestion.controls['name'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="suggestion.controls['name'].errors.required" style="color: red;">
+                   <mat-icon>warning</mat-icon> Titel is verplicht
+                </div>
+            </div>
+    </mat-card-content>
+        
+    <div *ngIf="suggestion.valid">
+        <button mat-raised-button color="primary" type="submit" [disabled]="!suggestion.valid" class="btn">
+            Verzend
+        </button>
+    </div>
+    </form>
+</div>
