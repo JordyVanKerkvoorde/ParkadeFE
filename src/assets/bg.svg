@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1354 484" style="enable-background:new 0 0 1354 484;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{fill:#3AED20;}
+	.st3{fill:none;stroke:#000000;stroke-width:7;stroke-miterlimit:10;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#F27127;}
+	.st5{fill:none;stroke:#F27127;stroke-width:7;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#F27127;stroke-width:6;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#F27127;stroke-width:5;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#F27127;stroke-width:3;stroke-miterlimit:10;}
+</style>
+<symbol  id="parklogo" viewBox="-158 -210.5 316 421">
+	<radialGradient id="SVGID_1_" cx="0" cy="0" r="212.78" fx="210.649" fy="0" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#C42030"/>
+		<stop  offset="1" style="stop-color:#FC8822"/>
+		<stop  offset="1" style="stop-color:#FE8F1F"/>
+		<stop  offset="1" style="stop-color:#FF931E"/>
+	</radialGradient>
+	<path class="st0" d="M158-52.5c0,87.26-45,113-159,263c-113-150-157-175.74-157-263c0-87.26,70.74-158,158-158S158-139.76,158-52.5
+		z"/>
+	<radialGradient id="SVGID_2_" cx="-0.5" cy="-53" r="113.5" fx="103.0667" fy="-99.4348" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#EE6E25"/>
+		<stop  offset="0.85" style="stop-color:#DD4E2A"/>
+		<stop  offset="0.94" style="stop-color:#DB4B2A"/>
+		<stop  offset="1" style="stop-color:#C5431E"/>
+	</radialGradient>
+	<circle class="st1" cx="-0.5" cy="-53" r="113.5"/>
+	<path class="st2" d="M-80.38-74.45c-6.31,5.97-6.58,15.93-0.6,22.24c0.1,0.11,0.2,0.21,0.3,0.31l1.82,1.83l64.78,63.66
+		c6.16,6.05,16.05,6.01,22.16-0.1l24.37-24.37l83.94-83.94c6.14-6.13,6.15-16.09,0.02-22.23c-0.01-0.01-0.01-0.01-0.02-0.02
+		l-2.66-2.66c-6.13-6.14-16.09-6.15-22.23-0.02c-0.01,0.01-0.01,0.01-0.02,0.02L-4.27-23.99l-51.37-51.38l-0.74-0.73
+		c-6.02-6.03-15.75-6.16-21.94-0.3L-80.38-74.45z"/>
+</symbol>
+<g>
+	<line class="st3" x1="-8.5" y1="337.5" x2="1369.5" y2="98.5"/>
+	<line class="st4" x1="-8.5" y1="337.5" x2="1369.5" y2="98.5"/>
+</g>
+<g>
+	<line class="st5" x1="-16.5" y1="338.5" x2="1369.5" y2="98.5"/>
+	<line class="st4" x1="-16.5" y1="338.5" x2="1369.5" y2="98.5"/>
+</g>
+<line class="st6" x1="384.5" y1="269.5" x2="536" y2="499"/>
+<path class="st7" d="M859.5,499.5"/>
+<path class="st7" d="M622.5,231.5"/>
+<line class="st8" x1="922.62" y1="177.35" x2="1352.5" y2="499.5"/>
+<line class="st9" x1="1164.5" y1="134.5" x2="1366.5" y2="256.5"/>
+<line class="st5" x1="87.5" y1="321.5" x2="105.5" y2="499.5"/>
+<line class="st6" x1="651.5" y1="223.5" x2="923.5" y2="497.5"/>
+<g id="vmark">
+	
+		<use xlink:href="#parklogo"  width="316" height="421" x="-158" y="-210.5" transform="matrix(0.8892 0 0 0.8789 648.5 199)" style="overflow:visible;"/>
+</g>
+</svg>

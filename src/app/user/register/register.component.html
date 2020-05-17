@@ -1,5 +1,5 @@
-<div fxLayout="row" fxLayoutAlign="center center" class="login-main">
-    <mat-card>
+<div fxLayout="column" fxLayoutAlign="space-around stretch" class="login-main">
+
       <form [formGroup]="user" (ngSubmit)="onSubmit()">
         <mat-card-header>
           <mat-card-title>Register</mat-card-title>
@@ -110,10 +110,11 @@
           </span>
         </mat-card-content>
   
-        <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-card-actions fxLayout="row" fxLayoutAlign="end">
           <a [routerLink]="['/login']"
           mat-stroked-button
-          color="primary">Login</a>
+          color="primary"
+          style="margin-right: 20px">Login</a>
   
           <button
             mat-raised-button
@@ -128,5 +129,5 @@
       <mat-card class="error" *ngIf="errorMessage" data-cy="appError">
         got an error while loading: {{ errorMessage }}
       </mat-card>
-    </mat-card>
+
   </div>

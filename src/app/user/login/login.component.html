@@ -1,5 +1,6 @@
-<div fxLayout="row" fxLayoutAlign="center center" class="login-main">
-    <mat-card>
+
+    <div fxLayout="column" fxLayoutAlign="space-around stretch" class="login-main">
+    
       <form [formGroup]="user" (ngSubmit)="onSubmit()">
         <mat-card-header>
           <mat-card-title>Login</mat-card-title>
@@ -13,6 +14,7 @@
               aria-label="email"
               data-cy="login-email"
               formControlName="username"
+              class="field"
             />
           </mat-form-field>
   
@@ -24,13 +26,15 @@
               aria-label="password"
               data-cy="login-password"
               formControlName="password"
+              class="field"
             />
           </mat-form-field>
         </mat-card-content>
-        <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-card-actions fxLayout="row" fxLayoutAlign="end">
           <a [routerLink]="['/register']"
           mat-stroked-button
-          color="primary">register</a>
+          color="primary"
+          style="margin-right: 20px">register</a>
   
           <button
             mat-raised-button
@@ -45,5 +49,4 @@
       <mat-card class="error" *ngIf="errorMessage" data-cy="appError">
         got an error while loading: {{ errorMessage }}
       </mat-card>
-    </mat-card>
-  </div>
+</div>
