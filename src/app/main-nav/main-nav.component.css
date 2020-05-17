@@ -2,6 +2,20 @@
   height: 100%;
 }
 
+.username{
+  color: #F7CB6E;
+  margin-right: 10px;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+
+.auth{
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
 .sidenav {
   width: 300px;
   overflow-x: hidden;
@@ -27,10 +41,15 @@
   padding: 5px;
 }
 
-.mat-nav-list a .mat-icon{
+ a .mat-icon{
   color: #555555;
   padding: 5px;
   margin: 5px;
+}
+
+.mat-nav-list .auth {
+  color: black;
+  font-size: 1em;
 }
 
 

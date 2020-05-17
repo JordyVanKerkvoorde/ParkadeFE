@@ -27,6 +27,8 @@ import { UserModule } from './user/user.module';
 import { ChartsModule } from 'ng2-charts';
 import { FormsModule, ReactiveFormsModule }         from '@angular/forms';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
+import { httpInterceptorProviders } from './interceptors';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -44,8 +46,9 @@ import { SuggestionsComponent } from './suggestions/suggestions.component';
     UserModule,
     ChartsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

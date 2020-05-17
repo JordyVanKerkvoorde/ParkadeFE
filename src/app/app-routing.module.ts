@@ -11,14 +11,21 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
+import { AuthGuard } from './user/auth.guard'
+import { LoginComponent } from './user/login/login.component';
+import { RegisterComponent } from './user/register/register.component';
 
 const appRoutes: Routes = [
-  { path: 'parkinglist', component: ParkingListComponent },
+  { path: 'parkinglist', component: ParkingListComponent,
+    data: { preload: true }, },
   { path: 'parking/:id', component: ParkingdetailsComponent},
   { path: 'map', component: MapComponent },
   { path: 'about', component: AboutComponent} ,
   { path: 'contact', component: ContactComponent },
-  { path: 'suggestions', component: SuggestionsComponent },
+  { path: 'suggestions', component: SuggestionsComponent,
+    canActivate: [ AuthGuard ], },
+    { path: 'login', component: LoginComponent },
+    { path: 'register', component: RegisterComponent },
 
   { path: '', redirectTo: 'map', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },

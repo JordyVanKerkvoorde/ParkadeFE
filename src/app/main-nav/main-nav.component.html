@@ -23,6 +23,27 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span class="nameTitle">Parkade</span>
+      <span class="fill-space"></span>
+      <span *ngIf="loggedInUser$ | async as user; else loginTemplate">
+        <div fxLayout="row">
+        <div class="username">
+          {{ user }}
+        </div>
+        <button (click)="logout()" mat-stroked-button color="primary" style="background-color: #F7CB6E;" class="auth">
+          logout
+        </button>
+        </div>
+      </span>
+      <ng-template #loginTemplate>
+        <span>
+          <button (click)="register()" mat-stroked-button color="accent" class="auth">
+            Register
+          </button>
+          <button (click)="login()" mat-stroked-button color="primary" style="background-color: #F7CB6E;" class="auth">
+            Login
+          </button>
+        </span>
+      </ng-template>
     </mat-toolbar>
     <!-- Add Content Here -->
     <ng-content></ng-content>
