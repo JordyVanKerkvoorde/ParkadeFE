@@ -13,7 +13,8 @@ De applicatie maakt gebruik van OpenLayers en OpenStreetMap om de parkings op ee
 Als je op een van de features klikt naveeg je naar de pagina van die geselecteerde parking.
 
 # Chart.js
-In de parkingapplicatie maak ik gebruik van Chart.js om de data vanuit de databank te visualiseren in een grafiekvorm van de voorbije dag. Zo zou er dan ook data van de voorbije dagen kunnen geanalyseerd worden en een gemiddelde genomen worden om zo aan voorspellingen te doen.
+In de parkingapplicatie maak ik gebruik van Chart.js om de data vanuit de databank te visualiseren in een grafiekvorm van de voorbije dag. 
+
 
 # Huidige problemen
 
