@@ -10,6 +10,7 @@ import { ParkingFilterPipe } from './parking-filter.pipe';
 import { ParkingdetailsComponent } from './parkingdetails/parkingdetails.component';
 import { ParkingdetailsResolverService } from './parkingdetails-resolver.service';
 import { ChartComponent } from './chart/chart.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { ChartComponent } from './chart/chart.component';
     ParkingListComponent,
     ParkingFilterPipe,
     ParkingdetailsComponent,
-    ChartComponent
+    ChartComponent,
   ],
   imports: [CommonModule, HttpClientModule, MaterialModule, ],
   exports: [ParkingListComponent]

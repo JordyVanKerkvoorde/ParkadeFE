@@ -1,23 +1,24 @@
-<h1 class="mat-display-2">{{ this.parking.name }}</h1>
-<div>
-    <mat-list>
-        <mat-list-item> Beschikbare plaatsen:  </mat-list-item>
-        <mat-list-item> Maximale capaciteit:  </mat-list-item>
-        <mat-list-item> Coördinaten:  </mat-list-item>
-    </mat-list>
-    <mat-list>
-        <!-- latestEntry = null => in API latest entry doorgeven -->
-        <mat-list-item> {{ this.parking.latestEntry.available }} </mat-list-item>
-        <mat-list-item> {{ this.parking.maxcap }} </mat-list-item>
-        <mat-list-item> {{ this.parking.latitude }}, {{ this.parking.longtitude }} </mat-list-item>
-    </mat-list>
-</div>
-    <!-- <button (click)="onClick()">
-        test
-    </button> -->
-<div>
+
+      <mat-card style="background-color: #FAFAFA;">
+        <blockquote class="blockquote bq-warning">
+            <p class="bq-title" style="font-size: 3em;">{{ this.parking.name }}</p>
+        </blockquote>
+        <div class="row">
+          <div class="col-sm" style="padding-right: 0;">
+              <ul class="list-group">
+                  <li class="list-group-item">Beschikbare plaatsen:</li>
+                  <li class="list-group-item">Maximale capaciteit</li>
+                  <li class="list-group-item">Coördinaten:</li>
+              </ul>
+          </div>
+          <div class="col-sm" style="padding-left: 0;">
+              <li class="list-group-item">{{ this.parking.latestEntry.available }}</li>
+              <li class="list-group-item">{{ this.parking.maxcap }}</li>
+              <li class="list-group-item">{{ this.parking.latitude }}, {{ this.parking.longtitude }}</li>
+          </div>
+          <div class="col-sm"></div>
+        </div>
     <!-- chart.js chartcomponent -->
-    <!-- API aanpassen zodat er een data doorgestuurd kan worden naar de front-end -->
-    <app-chart></app-chart>
-</div>
-    
+        <app-chart></app-chart>
+    </mat-card>
+

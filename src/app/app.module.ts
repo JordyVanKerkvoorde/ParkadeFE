@@ -29,7 +29,7 @@ import { FormsModule, ReactiveFormsModule }         from '@angular/forms';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
 import { httpInterceptorProviders } from './interceptors';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -47,6 +47,7 @@ import { HttpClientModule } from '@angular/common/http';
     ChartsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MDBBootstrapModule.forRoot(),
   ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
