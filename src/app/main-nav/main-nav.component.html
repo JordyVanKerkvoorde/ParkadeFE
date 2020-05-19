@@ -3,34 +3,34 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false"
-      style="background-color: #F6C86C;">
-    <ul class="list-group" style="background-color: #F6C86C;">
+      style="background-color: rgb(252, 215, 142);">
+    <ul class="list-group" style="background-color: rgb(252, 215, 142);">
       
-      <a class="list-group-item" [routerLink]="['map']" style="background-color: #F6C86C;">
+      <a class="list-group-item" [routerLink]="['map']">
         <p class="mb-0">
             <i class="fas fa-map-marked-alt fa-1x mr-4 orange p-3 rounded"></i>
             Home
         </p>
       </a>
-      <a class="list-group-item" [routerLink]="['about']" style="background-color: #F6C86C;">
+      <a class="list-group-item" [routerLink]="['about']">
         <p class="mb-0">
             <i class="fas fa-question-circle fa-1x mr-4 orange p-3 rounded"></i>
             About
         </p>
       </a>
-      <a class="list-group-item" [routerLink]="['parkinglist']" style="background-color: #F6C86C;">
+      <a class="list-group-item" [routerLink]="['parkinglist']">
         <p class="mb-0">
             <i class="fas fa-map-marker-alt fa-1x mr-4 orange p-3 rounded"></i>
             Parkings
         </p>
       </a>
-      <a class="list-group-item" [routerLink]="['suggestions']" style="background-color: #F6C86C;">
+      <a class="list-group-item" [routerLink]="['suggestions']">
         <p class="mb-0">
             <i class="fas fa-comment fa-1x mr-4 orange p-3 rounded"></i>
             Suggestions
         </p>
       </a>
-      <a class="list-group-item" [routerLink]="['contact']" style="background-color: #F6C86C;">
+      <a class="list-group-item" [routerLink]="['contact']">
         <p class="mb-0">
             <i class="fas fa-envelope fa-1x mr-4 orange p-3 rounded"></i>
             Contact

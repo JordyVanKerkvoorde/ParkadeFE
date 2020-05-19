@@ -1,7 +1,10 @@
 
 <mat-card>
+    <mat-card-title-group>
+        <img mat-card-sm-image src="../../../assets/parkade.svg" alt="logo">
+        <mat-card-title>{{ parking.name }}</mat-card-title>
+    </mat-card-title-group>
     <mat-card-header>
-        <mat-card-title><mat-icon class="icon">directions_car</mat-icon>{{ parking.name }}</mat-card-title>
         <mat-card-subtitle>{{ parking.latestEntry.available }} / {{ parking.maxcap }}</mat-card-subtitle>
     </mat-card-header>
 </mat-card>

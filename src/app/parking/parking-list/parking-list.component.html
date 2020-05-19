@@ -1,16 +1,16 @@
 
 <div fxLayout="column" fxLayoutGap="2%">
-    <mat-card>
-        <mat-form-field>
+    <div fxLayout="column" fxLayoutAlign="space-around stretch" class="filter">
+        <mat-form-field appearance="legacy">
             <input
                 matInput
                 (keyup)="filterParking$.next($event.target.value)"
-                placeholder="filter"
+                placeholder="Zoeken..."
                 type="text"
                 data-cy="filterInput"
             />
         </mat-form-field>
-    </mat-card>
+    </div>
     <mat-card class="error" *ngIf="errorMessage" data-cy="appError">
         error occured loading the parking list!
     </mat-card>
@@ -40,6 +40,6 @@
           <mat-spinner></mat-spinner>
         </ng-template>
       </ng-template>
-    <div class="background"></div>
+    <!-- <div class="background"></div> -->
       <!-- <img src="../../../assets/bg.svg" alt="background" class="background"> -->
 </div>

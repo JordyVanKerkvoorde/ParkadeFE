@@ -3,6 +3,10 @@
   color: #F27127;
 }
 
+.list-group-item{
+  background-color: rgb(252, 215, 142);
+}
+
 .sidenav-container {
   height: 100%;
 }
