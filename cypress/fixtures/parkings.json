@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Parking1",
+        "type": "car",
+        "latitude": 0.0,
+        "longtitude": 0.0,
+        "maxCap": 700
+    },
+    {
+        "id": 2,
+        "name": "Parking2",
+        "type": "car",
+        "latitude": 0.0,
+        "longtitude": 0.0,
+        "maxCap": 600
+    },
+    {
+        "id": 3,
+        "name": "Parking3",
+        "type": "car",
+        "latitude": 0.0,
+        "longtitude": 0.0,
+        "maxCap": 650
+    }
+]
