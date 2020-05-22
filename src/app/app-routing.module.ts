@@ -18,8 +18,10 @@ import { RegisterComponent } from './user/register/register.component';
 const appRoutes: Routes = [
   { path: 'parkinglist', component: ParkingListComponent,
     data: { preload: true }, },
-  { path: 'parking/:id', component: ParkingdetailsComponent},
-  { path: 'map', component: MapComponent },
+  { path: 'parking/:id', component: ParkingdetailsComponent,
+    data: { preload: true }, },
+  { path: 'map', component: MapComponent,
+    data: { preload: true }, },
   { path: 'about', component: AboutComponent} ,
   { path: 'contact', component: ContactComponent },
   { path: 'suggestions', component: SuggestionsComponent,

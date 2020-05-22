@@ -3,9 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ParkingComponent } from './parking/parking/parking.component';
-import { ParkinfoComponent } from './parking/parkinfo/parkinfo.component';
-import { ParkstatusComponent } from './parking/parkstatus/parkstatus.component';
-import { ParkstatisticsComponent } from './parking/parkstatistics/parkstatistics.component';
 import { MapComponent } from './map/map.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ParkingListComponent } from './parking/parking-list/parking-list.component';

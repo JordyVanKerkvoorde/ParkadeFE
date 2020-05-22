@@ -1,7 +1,5 @@
 import { NgModule, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ParkinfoComponent} from './parkinfo/parkinfo.component';
-import {ParkstatusComponent} from './parkstatus/parkstatus.component';
 import {ParkingComponent} from './parking/parking.component';
 import {ParkingListComponent} from './parking-list/parking-list.component'
 import { MaterialModule } from '../material/material.module';
@@ -14,9 +12,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
-  declarations: [
-    ParkinfoComponent, 
-    ParkstatusComponent, 
+  declarations: [ 
     ParkingComponent, 
     ParkingListComponent,
     ParkingFilterPipe,
