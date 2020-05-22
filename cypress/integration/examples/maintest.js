@@ -1,4 +1,4 @@
-describe('My First Test', function() {
+describe('Logictest', function() {
     it('app runs', function(){
         cy.visit('/')
     });
@@ -37,6 +37,5 @@ describe('My First Test', function() {
 
         cy.visit('/parkinglist');
         cy.get('[data-cy=appError]').should('be.visible');
-      });
-      
-  });
+    });
+});

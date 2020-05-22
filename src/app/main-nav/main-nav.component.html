@@ -52,7 +52,8 @@
       <span class="fill-space"></span>
       <span *ngIf="loggedInUser$ | async as user; else loginTemplate">
         <div fxLayout="row">
-        <div class="username">
+        <div class="username"
+          data-cy="loginTitle">
           {{ user }}
         </div>
         <button (click)="logout()" mat-stroked-button color="primary" style="background-color: #F7CB6E;" class="auth">
